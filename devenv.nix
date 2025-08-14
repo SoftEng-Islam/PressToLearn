@@ -91,6 +91,7 @@ in {
     test -d html || git clone --depth 1 --branch ${config.env.WORDPRESS_VERSION} ${config.env.WORDPRESS_REPO} html
     composer install
     php --version
+    exec zsh
   '';
 
   processes.open-url.exec = ''
